@@ -40,7 +40,11 @@
         <h3>Pliki</h3>
         <ul>
             @forelse ($showFiles as $file)
-                <li>{{ $file->name }}</li>
+                <li>
+                    <a href="{{ route('explorer.file.show', $file) }}">
+                        {{ $file->name }}
+                    </a>
+                </li>
             @empty
                 <li>
                     Brak plików do zagnieżdżenia
