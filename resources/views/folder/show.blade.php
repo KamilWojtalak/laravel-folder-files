@@ -21,6 +21,17 @@
             @endforelse
         </ul>
     </div>
+
+    <div class="">
+        <h3>Pliki</h3>
+        <ul>
+            @forelse ($showFiles as $file)
+                <li>{{ $file->name }}</li>
+            @empty
+                <li>Brak folderów do zagnieżdżenia</li>
+            @endforelse
+        </ul>
+    </div>
 </body>
 
 </html>
