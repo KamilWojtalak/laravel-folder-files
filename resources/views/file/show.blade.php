@@ -12,7 +12,7 @@
 
 <body>
     <p>
-        <a href="{{ route('explorer.show', $file->parent_id) }}">
+        <a href="{{ route('explorer.show', $file->folder_id) }}">
             Wróć
         </a>
     </p>
