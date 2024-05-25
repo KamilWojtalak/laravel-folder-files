@@ -11,8 +11,8 @@ class ExplorerController extends Controller
 {
     public function show(Folder $folder): View\View|View\Factory
     {
-        $showFolders = Folder::parent($folder)->get();
-        $showFiles = File::parent($folder)->get();
+        $showFolders = Folder::getByParent($folder);
+        $showFiles = File::getByFolder($folder);
 
         return view(
             'folder.show',
