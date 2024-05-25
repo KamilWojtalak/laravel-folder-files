@@ -12,12 +12,19 @@
 
 <body>
     <div class="">
+        <p>Wróć</p>
         <h3>Foldery</h3>
         <ul>
             @forelse ($showFolders as $folder)
-                <li>{{ $folder->name }}</li>
+                <li>
+                    <a href="{{ route('explorer.show', $folder) }}">
+                        {{ $folder->name }}
+                    </a>
+                </li>
             @empty
-                <li>Brak folderów do zagnieżdżenia</li>
+                <li>
+                    Brak folderów do zagnieżdżenia
+                </li>
             @endforelse
         </ul>
     </div>
@@ -28,7 +35,9 @@
             @forelse ($showFiles as $file)
                 <li>{{ $file->name }}</li>
             @empty
-                <li>Brak folderów do zagnieżdżenia</li>
+                <li>
+                    Brak folderów do zagnieżdżenia
+                </li>
             @endforelse
         </ul>
     </div>
