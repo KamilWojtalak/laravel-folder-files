@@ -7,6 +7,7 @@ use App\Models\Folder;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,8 +16,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+
         Folder::truncate();
         File::truncate();
+
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         Folder::factory(3)->create(); // 1, 2, 3
         File::factory(4)->create(); // 1, 2, 3, 4
