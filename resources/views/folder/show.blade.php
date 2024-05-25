@@ -30,7 +30,7 @@
                 </li>
             @empty
                 <li>
-                    Brak plików do zagnieżdżenia
+                    Brak folderów do zagnieżdżenia
                 </li>
             @endforelse
         </ul>
@@ -43,7 +43,7 @@
                 <li>{{ $file->name }}</li>
             @empty
                 <li>
-                    Brak folderów do zagnieżdżenia
+                    Brak plików do zagnieżdżenia
                 </li>
             @endforelse
         </ul>
