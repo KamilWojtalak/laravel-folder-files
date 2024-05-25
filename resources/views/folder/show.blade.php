@@ -9,10 +9,15 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    @if ($folder)
-        jest konkretny folder
-    @else
-        pierwsza strona
-    @endif
+    <div class="">
+        <h3>Foldery</h3>
+        <ul>
+            @forelse ($showFolders as $folder)
+                <li>{{ $folder->name }}</li>
+            @empty
+                <li>Brak folderów do zagnieżdżenia</li>
+            @endforelse
+        </ul>
+    </div>
 </body>
 </html>
