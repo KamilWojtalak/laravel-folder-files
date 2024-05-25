@@ -9,6 +9,10 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-
+    @if ($folder)
+        jest konkretny folder
+    @else
+        pierwsza strona
+    @endif
 </body>
 </html>
