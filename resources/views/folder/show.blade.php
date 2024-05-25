@@ -12,7 +12,14 @@
 
 <body>
     <div class="">
-        <p>Wróć</p>
+        @if ($folder->id)
+            <p>
+                <a href="{{ route('explorer.show', $folder->parent_id) }}">
+                    Wróć
+                </a>
+            </p>
+        @endif
+
         <h3>Foldery</h3>
         <ul>
             @forelse ($showFolders as $folder)
