@@ -7,5 +7,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('explorer/{folder}', [ExplorerController::class, 'show'])
+Route::get('explorer/{folder?}', [ExplorerController::class, 'show'])
     ->name('explorer.show');
