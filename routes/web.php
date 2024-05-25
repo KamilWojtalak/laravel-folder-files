@@ -9,3 +9,5 @@ Route::get('/', function () {
 
 Route::get('explorer/{folder?}', [ExplorerController::class, 'show'])
     ->name('explorer.show');
+Route::get('explorer/file/{file}', [ExplorerController::class, 'showFile'])
+    ->name('explorer.file.show');
