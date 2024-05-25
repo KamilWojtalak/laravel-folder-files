@@ -17,10 +17,12 @@ class FileFactory extends Factory
         ];
     }
 
-    public function folder(int $id): array
+    public function folder(int $folderId)
     {
-        return [
-            'folder_id' => $id
-        ];
+        return $this->state(function (array $attributes) use ($folderId) {
+            return [
+                'folder_id' => $folderId,
+            ];
+        });
     }
 }

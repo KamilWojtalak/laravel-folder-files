@@ -17,10 +17,12 @@ class FolderFactory extends Factory
         ];
     }
 
-    public function parent(int $id): array
+    public function parent(int $parentId)
     {
-        return [
-            'parent_id' => $id
-        ];
+        return $this->state(function (array $attributes) use ($parentId) {
+            return [
+                'parent_id' => $parentId,
+            ];
+        });
     }
 }
