@@ -14,6 +14,13 @@ return new class extends Migration
         Schema::create('folders', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('name');
+            $table->unsignedBigInteger('parent_id')->nullable();
+
+            $table->foreign('parent_id')
+                ->references('id')
+                ->on('folders')
+                ->onDelete('cascade');
         });
     }
 
