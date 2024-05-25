@@ -14,6 +14,10 @@
     <h2>Welcome</h2>
 
     <p>Struktura folderów i plików</p>
+
+    <p>
+        Go to <a href="{{ route('explorer.show', null) }}">explorer</a>
+    </p>
 </body>
 
 </html>
