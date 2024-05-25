@@ -30,7 +30,7 @@
                 </li>
             @empty
                 <li>
-                    Brak folderów do zagnieżdżenia
+                    Brak plików do zagnieżdżenia
                 </li>
             @endforelse
         </ul>
