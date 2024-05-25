@@ -15,11 +15,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
         Folder::truncate();
         File::truncate();
-
 
         Folder::factory(3)->create(); // 1, 2, 3
         File::factory(4)->create(); // 1, 2, 3, 4
