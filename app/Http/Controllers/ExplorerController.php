@@ -19,4 +19,12 @@ class ExplorerController extends Controller
             compact('folder', 'showFolders', 'showFiles')
         );
     }
+
+    public function showFile(File $file): View\View|View\Factory
+    {
+        return view(
+            'folder.file-show',
+            compact('file')
+        );
+    }
 }
