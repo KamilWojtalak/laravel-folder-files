@@ -9,15 +9,18 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class FileFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->name,
+            'folder_id' => null
+        ];
+    }
+
+    public function folder(int $id): array
+    {
+        return [
+            'folder_id' => $id
         ];
     }
 }
