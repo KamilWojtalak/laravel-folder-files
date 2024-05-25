@@ -12,6 +12,8 @@
 
 <body>
     <h2>Welcome</h2>
+
+    <p>Struktura folderów i plików</p>
 </body>
 
 </html>
