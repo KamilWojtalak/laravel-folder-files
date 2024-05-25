@@ -23,7 +23,7 @@ class ExplorerController extends Controller
     public function showFile(File $file): View\View|View\Factory
     {
         return view(
-            'folder.file-show',
+            'file.show',
             compact('file')
         );
     }
